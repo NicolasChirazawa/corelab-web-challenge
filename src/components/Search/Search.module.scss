@@ -1,0 +1,40 @@
+.Search {
+
+    width: 100%;
+    max-width: 36vw;
+
+    display: flex;
+    align-items: center;
+
+    box-shadow: 1px 1px 3px 0px #00000040;
+
+    background-color: #fff; 
+    overflow: hidden; /* Impede que o ícone de pesquisa se sobreponha */
+
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+  }
+  
+  input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+
+    &:focus {
+      outline: none; /* Remover a margem quando o input recebe foco */
+    }
+  }
+  
+  .SearchIcon {
+    font-size: 20px;
+    color: #888;
+    cursor: pointer;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 768px) { 
+  input::placeholder{
+    font-size: 12px;
+  }
+}

@@ -1,12 +1,23 @@
+import React, { useState } from "react";
+import styles from "./Search.module.scss";
+import { IoIosSearch } from "react-icons/io";
+
 interface ISearch {
   placeholder: string;
-  value: string;
-  onChange: () => void;
 }
 
+//Teste provisório
+const teste = () => {
+  console.log("Clicou no ícone de busca!");
+};
+
 const Search = (props: ISearch) => {
+
   return (
-    <input type="text" placeholder={props.placeholder} value={props.value} />
+    <div className={styles.Search}>
+      <input type="text" placeholder={props.placeholder} />
+      <IoIosSearch className={styles.SearchIcon} onClick={teste}/>
+    </div>
   );
 };
 

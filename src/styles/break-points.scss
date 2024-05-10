@@ -5,24 +5,36 @@ $desktop-large-size: 1201px;
 
 @mixin tablet {
   @media screen and (min-width: #{$tablet-size}) {
-    @content;
+    .cardWrapper {
+      grid-template-columns: repeat(1, 1fr);
+      @content;
+    }
   }
 }
 
 @mixin laptop {
-  @media screen and (min-width: #{$laptop-size}) {
-    @content;
+  @media (min-width: #{$laptop-size}) {
+    .cardWrapper {
+      grid-template-columns: repeat(2, 1fr);
+      @content;
+    }
   }
 }
 
 @mixin desktop {
   @media screen and (min-width: #{$desktop-size}) {
-    @content;
+    .cardWrapper {
+      grid-template-columns: repeat(2, 2fr);
+      @content;
+    }
   }
 }
 
 @mixin desktop-large {
   @media screen and (min-width: #{$desktop-large-size}) {
-    @content;
+    .cardWrapper {
+      grid-template-columns: repeat(3, 1fr);
+      @content;
+    }
   }
 }
